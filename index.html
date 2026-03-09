@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanban Tool | Simplify Your Workflow</title>
+    <meta name="description" content="A premium Kanban board for visual task management and real-time collaboration." />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <header class="navbar">
+        <div class="logo">
+          <i data-lucide="layout-dashboard"></i>
+          <h1 id="board-title-display">KanbanBoard</h1>
+        </div>
+        <div class="navbar-actions">
+          <button id="add-board" class="btn btn-primary">
+            <i data-lucide="plus"></i>
+            New Board
+          </button>
+        </div>
+      </header>
+
+      <main id="board-container">
+        <!-- Columns will be injected here -->
+        <div class="empty-state">
+          <p>Loading your board...</p>
+        </div>
+      </main>
+
+      <!-- Task Modal Shell -->
+      <div id="modal-container" class="modal-overlay hidden">
+        <div class="modal-content">
+          <!-- Modal content will be injected here -->
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

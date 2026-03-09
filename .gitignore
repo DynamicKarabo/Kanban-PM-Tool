@@ -1,0 +1,11 @@
+# Dependencies
+node_modules
+package-lock.json
+
+# Production
+dist
+build
+
+# Misc
+.DS_Store
+*.local
