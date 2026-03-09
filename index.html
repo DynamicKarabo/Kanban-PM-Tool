@@ -17,6 +17,14 @@
           <i data-lucide="layout-dashboard"></i>
           <h1 id="board-title-display">KanbanBoard</h1>
         </div>
+        <div class="board-switcher">
+          <label class="sr-only" for="board-select">Select board</label>
+          <select id="board-select" class="select"></select>
+          <button id="board-settings" class="btn btn-secondary" type="button" title="Board settings">
+            <i data-lucide="more-horizontal"></i>
+            Board
+          </button>
+        </div>
         <div class="navbar-actions">
           <button id="add-board" class="btn btn-primary">
             <i data-lucide="plus"></i>
@@ -25,10 +33,42 @@
         </div>
       </header>
 
-      <main id="board-container">
-        <!-- Columns will be injected here -->
-        <div class="empty-state">
-          <p>Loading your board...</p>
+      <main class="main">
+        <section class="toolbar" aria-label="Task filters">
+          <div class="toolbar-group grow">
+            <label class="sr-only" for="filter-query">Search</label>
+            <div class="input-icon">
+              <i data-lucide="search"></i>
+              <input id="filter-query" class="input" type="search" placeholder="Search tasks..." autocomplete="off" />
+            </div>
+          </div>
+          <div class="toolbar-group">
+            <label class="sr-only" for="filter-priority">Priority</label>
+            <select id="filter-priority" class="select">
+              <option value="">All priorities</option>
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+          <div class="toolbar-group">
+            <label class="sr-only" for="filter-tag">Tag</label>
+            <input id="filter-tag" class="input" type="text" placeholder="Tag…" autocomplete="off" />
+          </div>
+          <div class="toolbar-group">
+            <label class="sr-only" for="filter-assignee">Assignee</label>
+            <input id="filter-assignee" class="input" type="text" placeholder="Assignee…" autocomplete="off" />
+          </div>
+          <div class="toolbar-group">
+            <button id="filter-clear" class="btn btn-ghost" type="button">Clear</button>
+          </div>
+        </section>
+
+        <div id="board-container">
+          <!-- Columns will be injected here -->
+          <div class="empty-state">
+            <p>Loading your board...</p>
+          </div>
         </div>
       </main>
 
