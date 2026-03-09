@@ -283,6 +283,9 @@ body {
   width: 100%;
   color: var(--text-secondary);
   font-style: italic;
+  padding: 2rem;
+  border: none;
+  outline: none;
 }
 
 .card-tags {
@@ -323,4 +326,8 @@ body {
 
 .modal-footer {
   justify-content: space-between;
+}
+
+.hidden {
+  display: none !important;
 }
